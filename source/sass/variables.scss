@@ -3,8 +3,9 @@
 
 // Default
 
-$color-default-black:               #000000;
+$color-default-black:               #102654;
 $color-default-white:               #ffffff;
+$color-default-red:                 #ed0233;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
@@ -25,6 +26,8 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-roboto-condensed:               "Roboto Condensed", "Arial", sans-serif;
+$ff-alumni-sans:                    "Alumni Sans", "Arial", sans-serif;
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
