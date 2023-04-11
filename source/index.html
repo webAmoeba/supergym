@@ -1,86 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>super♂gym♂</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="main-header">
-        <div class="container">
-          <div class="main-header__first-line">
-            <a class="main-header__main-logo-link" href="index.html">
-              <picture>
-                <source media="(min-width: 1024px)"
-                  srcset="./img/main-logo/main-logo.webp 1x, ./img/main-logo/main-logo@2x.webp 2x">
-                <source media="(min-width: 1024px)"
-                  srcset="./img/main-logo/main-logo.png 1x, ./img/main-logo/main-logo@2x.png 2x">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>super♂gym♂</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__first-line">
+          <a class="main-header__main-logo-link" href="index.html">
+            <picture>
+              <source media="(min-width: 1024px)"
+                srcset="./img/main-logo/main-logo.webp 1x, ./img/main-logo/main-logo@2x.webp 2x">
+              <source media="(min-width: 1024px)"
+                srcset="./img/main-logo/main-logo.png 1x, ./img/main-logo/main-logo@2x.png 2x">
 
-                <source media="(min-width: 768px)"
-                  srcset="./img/main-logo/main-logo-tablet.webp 1x, ./img/main-logo/main-logo-tablet@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="./img/main-logo/main-logo-tablet.png 1x, ./img/main-logo/main-logo-tablet@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/main-logo/main-logo-tablet.webp 1x, ./img/main-logo/main-logo-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/main-logo/main-logo-tablet.png 1x, ./img/main-logo/main-logo-tablet@2x.png 2x">
 
-                <source media="(max-width: 767px)"
-                  srcset="./img/main-logo/main-logo-mobile.webp 1x, ./img/main-logo/main-logo-mobile@2x.webp 2x">
-                <source media="(max-width: 767px)"
-                  srcset="./img/main-logo/main-logo-mobile.png 1x, ./img/main-logo/main-logo-mobile@2x.png 2x">
+              <source media="(max-width: 767px)"
+                srcset="./img/main-logo/main-logo-mobile.webp 1x, ./img/main-logo/main-logo-mobile@2x.webp 2x">
+              <source media="(max-width: 767px)"
+                srcset="./img/main-logo/main-logo-mobile.png 1x, ./img/main-logo/main-logo-mobile@2x.png 2x">
 
-                <img width="119" height="23" src="./img/main-logo/main-logo.png" alt="Ссылка на главную страницу.">
-              </picture>
-            </a>
+              <img width="119" height="23" src="./img/main-logo/main-logo.png" alt="Ссылка на главную страницу.">
+            </picture>
+          </a>
 
-            <a class="main-header__phone" href="tel:+78005555555">8-800-555-55-55</a>
-          </div>
-
-          <div class="main-header__second-line">
-            <div class="main-header__promo-text">
-              <h2>омск</h2>
-              <h3>
-                <div>Тренажёрный зал</div>
-                <div>Групповые занятия</div>
-                <div>Кардио-зона</div>
-              </h3>
-              <h1>Фитнес<br>центр</h1>
-              <a class="main-header__button button" href="#">Купить абонемент</a>
-            </div>
-
-            <div class="main-header__promo-photo">
-              <picture>
-                <source media="(min-width: 1024px)" srcset="./img/promo/promo.webp 1x, ./img/promo/promo@2x.webp 2x">
-                <source media="(min-width: 1024px)" srcset="./img/promo/promo.jpg 1x, ./img/promo/promo@2x.jpg 2x">
-
-                <source media="(min-width: 768px)"
-                  srcset="./img/promo/promo-tablet.webp 1x, ./img/promo/promo-tablet@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="./img/promo/promo-tablet.jpg 1x, ./img/promo/promo-tablet@2x.jpg 2x">
-
-                <img width="500" height="556" src="./img/promo/promo.jpg"
-                  alt="Мужчина в футболке супермена, смотрит как супермен, возможно супермен.">
-              </picture>
-            </div>
-          </div>
-
+          <a class="main-header__phone" href="tel:+78005555555">8-800-555-55-55</a>
         </div>
-      </header>
 
-      <main>
+        <div class="main-header__second-line">
+          <div class="main-header__promo-text">
+            <h2>омск</h2>
+            <h3>
+              <div>Тренажёрный зал</div>
+              <div>Групповые занятия</div>
+              <div>Кардио-зона</div>
+            </h3>
+            <h1>
+              <div>Фитнес</div>
+              <div>центр</div>
+            </h1>
+            <a class="main-header__button button" href="#">Купить абонемент</a>
+          </div>
 
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
+          <div class="main-header__promo-photo">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="./img/promo/promo.webp 1x, ./img/promo/promo@2x.webp 2x">
+              <source media="(min-width: 1024px)" srcset="./img/promo/promo.jpg 1x, ./img/promo/promo@2x.jpg 2x">
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+              <source media="(min-width: 768px)"
+                srcset="./img/promo/promo-tablet.webp 1x, ./img/promo/promo-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/promo/promo-tablet.jpg 1x, ./img/promo/promo-tablet@2x.jpg 2x">
+
+              <img width="500" height="556" src="./img/promo/promo.jpg"
+                alt="Мужчина в футболке супермена, смотрит как супермен, возможно супермен.">
+            </picture>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <div class="preview">
+        <div class="container">
+          <div class="preview__grid">
+            <section class="preview__text-section text">
+              <h2>Тренажерный зал</h2>
+              <h3>Просторный зал площадью 900 кв/м</h3>
+              <p>
+                Supergym&nbsp;&mdash; самый большой фитнес центр&nbsp;за&nbsp;Уралом и&nbsp;идеальное место
+                для&nbsp;укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным
+                оборудованием для всех спортсменов.
+              </p>
+              <p>
+                В&nbsp;зале расположены отдельная зона для Crossfit&nbsp;и кардио-зона с&nbsp;40&nbsp;тренажерами. Также
+                в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+              </p>
+            </section>
+
+            <div class="preview__img">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="./img/preview/main.webp 1x, ./img/preview/main@2x.webp 2x">
+                <source media="(min-width: 1024px)" srcset="./img/preview/main.jpg 1x, ./img/preview/main@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/preview/main-tablet.webp 1x, ./img/preview/main-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/preview/main-tablet.jpg 1x, ./img/preview/main-tablet@2x.jpg 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/preview/main-mobile.webp 1x, ./img/preview/main-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/preview/main-mobile.jpg 1x, ./img/preview/main-mobile@2x.jpg 2x">
+                <img width="660" height="401" src="./img/preview/main.jpg" alt="Фото спортивного зала изнутри.">
+              </picture>
+            </div>
+
+            <div class="preview__video-wrapper">
+              <iframe class="preview__youtube-iframe" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay>
+              </iframe>
+
+              <picture>
+                <source media="(min-width: 1024px)"
+                  srcset="./img/preview/video-preview/main.webp 1x, ./img/preview/video-preview/main@2x.webp 2x">
+                <source media="(min-width: 1024px)"
+                  srcset="./img/preview/video-preview/main.jpg 1x, ./img/preview/video-preview/main@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/preview/video-preview/main-tablet.webp 1x, ./img/preview/video-preview/main-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./img/preview/video-preview/main-tablet.jpg 1x, ./img/preview/video-preview/main-tablet@2x.jpg 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/preview/video-preview/main-mobile.webp 1x, ./img/preview/video-preview/main-mobile@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/preview/video-preview/main-mobile.jpg 1x, ./img/preview/video-preview/main-mobile@2x.jpg 2x">
+                <img class="preview__video-preview" width="364" height="228" src="./img/preview/video-preview/main.jpg"
+                  alt="Превью видео. Фото спортивного зала изнутри.">
+              </picture>
+
+              <button class="preview__video-button"><span class="visually-hidden">Включить видео.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
 </html>
