@@ -1,0 +1,266 @@
+.instructors {
+  padding-top: 7px;
+  padding-bottom: 91px;
+  text-align: left;
+  position: relative;
+
+  @include vp-1023 {
+    padding-top: 21px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1249px) {
+    .swiper {
+      max-width: 864px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 953px) {
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 566px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 8px;
+    padding-bottom: 70px;
+  }
+}
+
+.instructors__container {
+  position: relative;
+
+  @include container;
+
+  @include vp-767 {
+    @include container(47px);
+  }
+}
+
+.instructors h2 {
+  text-align: left;
+
+  @include vp-1023 {
+    text-align: center;
+  }
+}
+
+.instructors__description {
+  display: none;
+}
+
+.instructors-list {
+  margin: 0;
+  margin-top: 41px;
+  padding: 0;
+  list-style-type: none;
+  color: $color-default-white;
+
+  @media (max-width: 904px) {
+    max-width: 864px;
+  }
+
+  @include vp-1023 {
+    margin-top: 30px;
+  }
+
+  @include vp-767 {
+    margin-top: 36px;
+  }
+}
+
+.instructors-list .instructors__slide-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  align-content: end;
+  overflow: auto;
+}
+
+.instructors-list h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  padding: 9%;
+}
+
+.instructors-list > li:hover,
+.instructors-list > li:focus-visible {
+  align-content: start;
+
+  .instructors__slide-text {
+    background-color: rgba(16, 38, 84, 0.89);
+    align-content: start;
+  }
+
+  h3 {
+    padding-top: 52px;
+    padding-bottom: 0;
+  }
+
+  .instructors__description {
+    display: grid;
+    padding: 5%;
+    padding-bottom: 5px;
+    padding-top: 0;
+
+    h4 {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .instructors__description > ul {
+    margin: 0;
+    margin-top: 24px;
+    padding: 0;
+    list-style-type: none;
+    padding-left: 24%;
+    font-size: 14px;
+    line-height: 20px;
+
+    & > li {
+      margin-top: 13px;
+    }
+  }
+}
+
+.instructors__img img {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 294px;
+
+  @include vp-767 {
+    height: auto;
+    min-height: 274px;
+  }
+}
+
+.instructors__button-left,
+.instructors__button-right {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  min-width: 47px;
+  width: calc((100vw - 1160px) / 2);
+  border: none;
+  background-color: transparent;
+  z-index: 1;
+
+  @media (max-width: 1249px) {
+    width: calc((100% - 864px) / 2);
+  }
+
+  @include vp-1023 {
+    width: calc((100vw - 566px) / 2);
+  }
+
+  @include vp-767 {
+    width: 47px;
+  }
+}
+
+.instructors__button-left {
+  right: 50%;
+  margin-right: calc(50% - 20px);
+
+  @media (max-width: 1249px) {
+    margin-right: calc(864px / 2);
+  }
+
+  @media (max-width: 953px) {
+    margin-right: 283px;
+  }
+
+  @include vp-767 {
+    margin-right: calc(50% - 47px);
+
+    @media (max-width: 350px) {
+      margin-right: calc(50% - 47px);
+    }
+  }
+
+  .instructors__button-icon {
+    position: absolute;
+    bottom: 131px;
+    right: 40px;
+
+    @media (max-width: 1366px) {
+      right: 40%;
+    }
+
+    @include vp-1023 {
+      right: 10%;
+    }
+
+    @media (max-width: 953px) {
+      right: 40%;
+    }
+
+    @include vp-767 {
+      right: 46%;
+      width: 10px;
+      height: 19px;
+      bottom: 36%;
+    }
+  }
+}
+
+.instructors__button-right {
+  left: 50%;
+  margin-left: calc(50% - 20px);
+
+  @media (max-width: 1249px) {
+    margin-left: calc(864px / 2);
+  }
+
+  @media (max-width: 953px) {
+    margin-left: 283px;
+  }
+
+  @include vp-767 {
+    margin-left: calc(50% - 47px);
+
+    @media (max-width: 350px) {
+      margin-left: calc(50% - 47px);
+    }
+  }
+
+  .instructors__button-icon {
+    position: absolute;
+    bottom: 131px;
+    transform: rotate(180deg);
+    left: 40px;
+
+    @media (max-width: 1366px) {
+      left: 40%;
+    }
+
+    @include vp-1023 {
+      left: 10%;
+    }
+
+    @media (max-width: 953px) {
+      left: 40%;
+    }
+
+    @include vp-767 {
+      left: 46%;
+      width: 10px;
+      height: 19px;
+      bottom: 36%;
+    }
+  }
+}
