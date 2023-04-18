@@ -13,8 +13,6 @@ const initSwiperInstructors = (swiper) => {
       navigation: {
         nextEl: '.instructors__button-left',
         prevEl: '.instructors__button-right',
-        // nextEl: '.swiper-button-next',
-        // prevEl: '.swiper-button-prev',
       },
 
       slidesPerView: 4,
