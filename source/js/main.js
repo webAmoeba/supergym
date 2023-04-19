@@ -3,11 +3,13 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initSwiperInstructors} from './vendor/swiper-instructors.js';
+import {initSwiperReviews} from './vendor/swiper-reviews.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  const swiper = document.querySelector('.swiper');
+  const swiperInstructors = document.querySelector('#swiper-instructors');
+  const swiperReviews = document.querySelector('#swiper-reviews');
 
   // Utils
   // ---------------------------------
@@ -25,7 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initSwiperInstructors(swiper);
+    initSwiperInstructors(swiperInstructors);
+    initSwiperReviews(swiperReviews);
   });
 });
 

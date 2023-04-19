@@ -186,10 +186,6 @@
 
   @include vp-767 {
     margin-right: calc(50% - 47px);
-
-    @media (max-width: 350px) {
-      margin-right: calc(50% - 47px);
-    }
   }
 
   .instructors__button-icon {
