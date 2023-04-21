@@ -127,10 +127,13 @@
 
 .stocks__payment-link {
   margin-top: auto;
+  user-select: none;
 
   @include vp-767 {
     margin-top: 22px;
   }
+
+  @include behavior;
 }
 
 .stocks__img {
@@ -208,8 +211,11 @@
 
 .stocks__advantage-link {
   margin-top: auto;
+  user-select: none;
 
   @include vp-767 {
     margin-top: 18px;
   }
+
+  @include behavior;
 }

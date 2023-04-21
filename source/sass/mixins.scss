@@ -131,5 +131,25 @@
   clip-path: inset(100%);
 }
 
+@mixin behavior(
+    $outline-offset: 4px,
+    $outline-color: $color-default-black,
+    $opacity-hover: 0.6,
+    $opacity-active: 0.3
+  ) {
+  &:hover {
+    opacity: $opacity-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $outline-color;
+    outline-offset: $outline-offset;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+}
+
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

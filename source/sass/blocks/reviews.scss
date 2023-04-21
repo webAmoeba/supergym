@@ -15,6 +15,7 @@
 
   .container {
     @include container(47px);
+    position: relative;
   }
 
   .swiper {
@@ -113,6 +114,24 @@
   border: none;
   background-color: transparent;
   z-index: 1;
+  cursor: pointer;
+
+  &:hover .reviews__button-icon {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible .reviews__button-icon {
+    outline: 2px solid $color-default-black;
+    outline-offset: 8px;
+  }
+
+  &:active .reviews__button-icon {
+    opacity: 0.3;
+  }
 
   @include vp-1023 {
     width: calc((100vw - 566px) / 2);
@@ -123,7 +142,12 @@
   }
 
   &.swiper-button-disabled {
+    cursor: unset;
+  }
+
+  &.swiper-button-disabled .reviews__button-icon {
     opacity: 0.3;
+    cursor: unset;
   }
 }
 
@@ -145,11 +169,11 @@
   .reviews__button-icon {
     position: absolute;
     right: 40px;
-    bottom: 43%;
+    top: 50%;
+    transform: translateY(-50%);
 
     @include vp-767 {
       right: 22px;
-      bottom: 44%;
     }
   }
 }
@@ -171,19 +195,20 @@
   }
 
   .reviews__button-icon {
-    transform: rotate(180deg);
     position: absolute;
     left: 40px;
-    bottom: 43%;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
 
     @include vp-767 {
       left: 22px;
-      bottom: 44%;
     }
   }
 }
 
 .reviews__button-icon {
-  width: 10px;
-  height: 19px;
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
 }

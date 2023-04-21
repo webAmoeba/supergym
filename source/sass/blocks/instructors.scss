@@ -43,19 +43,35 @@
 
 .instructors h2 {
   text-align: left;
+  margin-bottom: 48px;
+
+  @media (max-width: 1249px) {
+    max-width: 864px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @include vp-1023 {
     text-align: center;
+    margin-bottom: 31px;
   }
+
+  @include vp-767 {
+    margin-bottom: 42px;
+  }
+}
+
+.instructors h3 {
+  margin: 0;
+  margin-bottom: 22px;
 }
 
 .instructors__description {
   display: none;
 }
 
-.instructors-list {
+.instructors__list {
   margin: 0;
-  margin-top: 41px;
   padding: 0;
   list-style-type: none;
   color: $color-default-white;
@@ -64,16 +80,12 @@
     max-width: 864px;
   }
 
-  @include vp-1023 {
-    margin-top: 30px;
-  }
-
-  @include vp-767 {
-    margin-top: 36px;
+  & > li {
+    position: relative;
   }
 }
 
-.instructors-list .instructors__slide-text {
+.instructors__slide-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -83,6 +95,7 @@
   display: grid;
   align-content: end;
   overflow: auto;
+  justify-content: center;
 }
 
 .instructors-list h3 {
@@ -94,18 +107,22 @@
   padding: 9%;
 }
 
-.instructors-list > li:hover,
-.instructors-list > li:focus-visible {
+.instructors__slide-text:hover,
+.instructors__slide-text:focus-visible {
   align-content: start;
-
-  .instructors__slide-text {
-    background-color: rgba(16, 38, 84, 0.89);
-    align-content: start;
-  }
+  z-index: 1;
+  background-color: rgba(16, 38, 84, 0.89);
+  outline: none;
 
   h3 {
     padding-top: 52px;
     padding-bottom: 0;
+    text-align: center;
+    margin: 0;
+
+    @include vp-767 {
+      padding-top: 44px;
+    }
   }
 
   .instructors__description {
@@ -113,21 +130,44 @@
     padding: 5%;
     padding-bottom: 5px;
     padding-top: 0;
+    z-index: 2;
 
     h4 {
       text-align: center;
       margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      color: #b6bdcc;
+    }
+  }
+
+  .instructors__advantages li {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      left: -16px;
+      top: 5px;
+      background-color: $color-default-white;
+      border-radius: 50%;
     }
   }
 
   .instructors__description > ul {
     margin: 0;
-    margin-top: 24px;
+    margin-top: 20px;
     padding: 0;
     list-style-type: none;
     padding-left: 24%;
     font-size: 14px;
     line-height: 20px;
+
+    @include vp-767 {
+      padding-left: 38px;
+    }
 
     & > li {
       margin-top: 13px;
@@ -158,9 +198,27 @@
   border: none;
   background-color: transparent;
   z-index: 1;
+  cursor: pointer;
+
+  &:hover .instructors__button-icon {
+    opacity: 0.6;
+  }
+
+  &:active .instructors__button-icon {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible .instructors__button-icon {
+    outline: 2px solid $color-default-black;
+    outline-offset: 8px;
+  }
 
   @media (max-width: 1249px) {
-    width: calc((100% - 864px) / 2);
+    width: calc((100vw - 864px) / 2);
   }
 
   @include vp-1023 {
@@ -190,8 +248,9 @@
 
   .instructors__button-icon {
     position: absolute;
-    bottom: 131px;
     right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
 
     @media (max-width: 1366px) {
       right: 40%;
@@ -209,7 +268,6 @@
       right: 46%;
       width: 10px;
       height: 19px;
-      bottom: 36%;
     }
   }
 }
@@ -236,9 +294,9 @@
 
   .instructors__button-icon {
     position: absolute;
-    bottom: 131px;
-    transform: rotate(180deg);
     left: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
 
     @media (max-width: 1366px) {
       left: 40%;
@@ -256,7 +314,6 @@
       left: 46%;
       width: 10px;
       height: 19px;
-      bottom: 36%;
     }
   }
 }

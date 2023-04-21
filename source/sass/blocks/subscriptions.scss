@@ -88,6 +88,9 @@
   line-height: 150%;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+
+  @include behavior;
 
   &.is-active::after {
     position: absolute;
@@ -150,11 +153,13 @@
   background-color: $color-default-white;
   border: 7px solid transparent;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     border-image: linear-gradient(148.82deg, #d10a42, #00359f) 1;
   }
 
-  &:hover button {
+  &:hover a,
+  .button:focus-within {
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border: none;
     color: $color-default-white;
@@ -242,7 +247,7 @@
     }
   }
 
-  button {
+  a {
     margin-top: 34px;
     min-height: 64px;
     border-width: 2px;

@@ -1,0 +1,141 @@
+.main-footer {
+  background-color: #030a1a;
+  padding-top: 40px;
+  padding-bottom: 31px;
+  color: $color-default-white;
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 400px 1fr;
+      padding-bottom: 11px;
+    }
+
+    @include vp-767 {
+      display: block;
+      padding-bottom: 19px;
+    }
+  }
+}
+
+.main-footer__logo-link-wrapper {
+  grid-column: 1/3;
+  padding: 10px 0;
+  display: flex;
+
+  @include vp-1023 {
+    padding: 8px 0;
+    grid-column: unset;
+  }
+
+  @include vp-767 {
+    position: absolute;
+  }
+}
+
+.main-footer__logo-link {
+  @include vp-1023 {
+    img {
+      width: 82px;
+
+      @include vp-767 {
+        width: 68px;
+      }
+    }
+  }
+
+  @include behavior(6px, $color-default-white);
+}
+
+.main-footer__navigation {
+  grid-column: 4/10;
+
+  @include vp-1023 {
+    grid-column: unset;
+    margin-top: 5px;
+  }
+}
+
+.main-footer__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+
+  @include vp-1023 {
+    gap: 26px;
+  }
+
+  @include vp-767 {
+    gap: unset;
+    display: block;
+    columns: 2 auto;
+    column-gap: 28px;
+  }
+}
+
+.main-footer__nav-item {
+  @include vp-767 {
+    margin-bottom: 17px;
+
+    &:first-child {
+      padding-top: 40px;
+    }
+  }
+
+  a {
+    color: $color-default-white;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 6px 2px;
+
+    @include behavior(2px, $color-default-white);
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+.main-footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 10/13;
+  justify-content: end;
+  gap: 7px;
+
+  @include vp-1023 {
+    grid-column: unset;
+  }
+
+  @include vp-767 {
+    justify-content: start;
+    margin-top: 12px;
+    margin-left: -3px;
+    gap: 5px;
+  }
+}
+
+.main-footer__social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    line-height: 0;
+    color: $color-default-white;
+    padding: 3px;
+
+    @include behavior(2px, $color-default-white);
+  }
+}
