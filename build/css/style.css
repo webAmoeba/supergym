@@ -4370,11 +4370,13 @@ button,
   .stocks__advantage {
     min-height: 211px;
     padding: 24px 28px 30px;
+    width: 50%;
   }
 }
 @media (max-width: 767px) {
   .stocks__advantage {
     padding-top: 34px;
+    width: 100%;
   }
 }
 .stocks__advantage h3 {
