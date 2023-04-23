@@ -479,7 +479,7 @@
           <h2>Наши преимущества</h2>
 
           <div class="advantages__list">
-            <div class="advantages__item advantages__item--usual">
+            <div class="advantages__item advantages__item--usual-without-js">
               <dl class="advantages__quality">
                 <dt>900</dt>
                 <dd>кв/м</dd>
@@ -490,7 +490,24 @@
               </dl>
             </div>
 
-            <div class="advantages__item advantages__item--usual">
+            <!--
+              добавление "центрального преимущества" происходит внутри списка advantages__item--center,
+              сам список "центральных преимуществ" внутри общего списка advantages__list может быть в любом месте
+             -->
+            <ul class="advantages__item advantages__item--center">
+              <li>
+                <dl class="advantages__quality">
+                  <dt>100</dt>
+                  <dd>Тренажеров</dd>
+                </dl>
+                <div class="advantages__text">
+                  <p>Современные тренажеры
+                    на&nbsp;все&nbsp;группы&nbsp;мышц</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="advantages__item advantages__item--usual-without-js">
               <dl class="advantages__quality">
                 <dt>70</dt>
                 <dd>машин</dd>
@@ -502,18 +519,7 @@
               </dl>
             </div>
 
-            <div class="advantages__item advantages__item--center">
-              <dl class="advantages__quality">
-                <dt>100</dt>
-                <dd>Тренажеров</dd>
-              </dl>
-              <div class="advantages__text advantages__text--center">
-                <p>Современные тренажеры
-                  на&nbsp;все&nbsp;группы&nbsp;мышц</p>
-              </div>
-            </div>
-
-            <div class="advantages__item advantages__item--usual">
+            <div class="advantages__item advantages__item--usual-without-js">
               <dl class="advantages__quality">
                 <dt>350</dt>
                 <dd>мест</dd>
@@ -525,7 +531,7 @@
               </dl>
             </div>
 
-            <div class="advantages__item advantages__item--usual">
+            <div class="advantages__item advantages__item--usual-without-js">
               <dl class="advantages__quality">
                 <dt>5+</dt>
                 <dd>лет</dd>
@@ -536,7 +542,6 @@
                 </dd>
               </dl>
             </div>
-
           </div>
         </div>
       </section>
