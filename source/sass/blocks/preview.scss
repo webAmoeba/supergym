@@ -93,6 +93,20 @@
   bottom: -115px;
   background-color: $color-default-black;
 
+  img {
+    object-fit: cover;
+
+    @include vp-1023 {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+
   @include vp-1023 {
     margin-top: -121px;
     position: relative;
@@ -123,6 +137,32 @@
       z-index: 1;
     }
   }
+
+  & > a {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    background-image: url("../img/svg/preview-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height: 0;
+
+    @include behavior(8px, $color-default-red);
+
+    @include vp-1023 {
+      width: 74px;
+      height: 74px;
+    }
+  }
 }
 
 .preview__youtube-iframe {
@@ -133,44 +173,4 @@
   width: 100%;
   height: 100%;
   border: none;
-}
-
-.preview__video-preview {
-  object-fit: cover;
-
-  @include vp-1023 {
-    width: 100%;
-  }
-
-  @include vp-767 {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.preview__video-button {
-  width: 100px;
-  height: 100px;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-  background-image: url("../img/svg/preview-button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  line-height: 0;
-
-  @include behavior(8px, $color-default-red);
-
-  @include vp-1023 {
-    width: 74px;
-    height: 74px;
-  }
 }

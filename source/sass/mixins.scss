@@ -132,11 +132,11 @@
 }
 
 @mixin behavior(
-    $outline-offset: 4px,
-    $outline-color: $color-default-black,
-    $opacity-hover: 0.6,
-    $opacity-active: 0.3
-  ) {
+      $outline-offset: 4px,
+      $outline-color: $color-default-black,
+      $opacity-hover: 0.6,
+      $opacity-active: 0.3
+    ) {
   &:hover {
     opacity: $opacity-hover;
   }
@@ -149,6 +149,28 @@
   &:active {
     opacity: $opacity-active;
   }
+}
+
+@mixin button {
+  padding: 10px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: inherit;
+  border: 4px solid;
+  border-color: inherit;
+  background-color: transparent;
+  user-select: none;
+
+  @include behavior;
 }
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие

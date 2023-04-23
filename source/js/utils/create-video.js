@@ -1,6 +1,6 @@
 const container = document.querySelector('.preview__video-wrapper');
 const preview = container.querySelector('picture');
-const button = container.querySelector('.preview__video-button');
+const button = container.querySelector('#youtube');
 
 const createVideo = () => {
   const video = document.createElement('iframe');

@@ -45,6 +45,22 @@
   display: flex;
   flex-direction: column;
 
+  & > a {
+    @include button;
+    @include max-w;
+
+    margin-top: 30px;
+    min-height: 70px;
+
+    @include vp-1023 {
+      margin-top: auto;
+      min-height: 41px;
+      border-width: 2px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
   @include vp-1023 {
     flex-basis: 292px;
     padding-top: 52px;
@@ -137,6 +153,17 @@
   position: relative;
   align-self: start;
 
+  & > time {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+
   @include vp-1023 {
     margin-top: -2px;
     gap: 5px;
@@ -158,17 +185,6 @@
   }
 }
 
-.super-games__date-day {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 150%;
-
-  @include vp-1023 {
-    font-size: 24px;
-    line-height: 150%;
-  }
-}
-
 .super-games__month-year-grid {
   font-size: 14px;
   line-height: 150%;
@@ -187,49 +203,34 @@
 .super-games__time {
   display: flex;
   flex-direction: column;
-}
 
-.super-games__oclock {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 150%;
-  margin-top: -2px;
-  position: relative;
-  align-self: start;
-
-  @include vp-1023 {
-    font-size: 24px;
+  & > time {
+    font-weight: 700;
+    font-size: 40px;
     line-height: 150%;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 1px;
-    width: 95%;
-    left: 0;
-    top: 5px;
-    background-color: $color-default-white;
+    margin-top: -2px;
+    position: relative;
+    align-self: start;
 
     @include vp-1023 {
-      top: 2px;
-      width: 100%;
+      font-size: 24px;
+      line-height: 150%;
     }
-  }
-}
 
-.super-games__button {
-  @include max-w;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 95%;
+      left: 0;
+      top: 5px;
+      background-color: $color-default-white;
 
-  margin-top: 30px;
-  min-height: 70px;
-
-  @include vp-1023 {
-    margin-top: auto;
-    min-height: 41px;
-    border-width: 2px;
-    font-size: 10px;
-    line-height: 12px;
+      @include vp-1023 {
+        top: 2px;
+        width: 100%;
+      }
+    }
   }
 }
 
