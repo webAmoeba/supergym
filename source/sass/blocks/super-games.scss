@@ -94,6 +94,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 344px;
+  flex-wrap: wrap;
 
   @include max-w;
 }

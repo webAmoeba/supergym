@@ -10,7 +10,7 @@
 
   @include vp-767 {
     padding-top: 46px;
-    padding-bottom: 36px;
+    padding-bottom: 62px;
     text-align: center;
   }
 }
@@ -33,22 +33,84 @@
 .advantages__list {
   margin-top: 26px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 34.6%;
-  position: relative;
+  grid-template-columns: 1fr 23% 1fr;
+  column-gap: 5.6%;
+  grid-auto-flow: dense;
+
 
   @include vp-1023 {
     column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
     margin: 0;
+    margin-top: 10px;
   }
 }
 
-.advantages__item--usual {
+.advantages__item--usual-without-js {
+  padding-top: 2px;
+  display: flex;
+  column-gap: 30px;
   padding-bottom: 52px;
+  padding-left: 20px;
+  position: relative;
+
+  &:nth-of-type(2n - 1) {
+    grid-column: 1/2;
+    padding-left: 20px;
+
+    @include vp-1023 {
+      grid-column: unset;
+      padding-left: 0;
+    }
+
+    @include vp-767 {
+      padding: 0 45px;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    grid-column: 3/4;
+    padding-left: 0;
+
+    @include vp-1023 {
+      grid-column: unset;
+    }
+
+    @include vp-767 {
+      padding: 0 45px;
+    }
+  }
+
+  &:nth-of-type(n + 3) {
+    padding-top: 56px;
+
+    @include vp-1023 {
+      padding-top: 28px;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: rgba(209, 10, 66, 0.2);
+
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
 
   .advantages__quality {
     margin: 0;
@@ -87,124 +149,105 @@
     }
   }
 
-  @include vp-1023 {
-    padding-bottom: 26px;
-  }
-}
+  .advantages__text {
+    padding-top: 20px;
+    margin: 0;
 
-.advantages__item {
-  position: relative;
-  padding-top: 2px;
-  display: flex;
-  column-gap: 30px;
-
-  @include vp-767 {
-    display: grid;
-    margin-top: 20px;
-    padding: 0 45px 26px;
-  }
-
-
-  &--usual:first-child,
-  &--usual:nth-child(2n + 4) {
-    padding-left: 20px;
-
-    @include vp-1023 {
-      padding-left: 0;
-    }
-
-    @include vp-767 {
-      padding: 0 45px;
-    }
-  }
-
-  &:nth-child(n + 4) {
-    padding-top: 56px;
-
-    @include vp-1023 {
-      padding-top: 28px;
-    }
-
-    @include vp-767 {
-      padding-top: 0;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: rgba(209, 10, 66, 0.2);
+    & > dt {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 150%;
 
       @include vp-1023 {
-        display: none;
+        font-size: 20px;
+      }
+    }
+
+    & > dd {
+      margin-top: 6px;
+      margin-left: 0;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+
+      @include vp-1023 {
+        margin-top: 2px;
+      }
+    }
+
+    @include vp-1023 {
+      padding-top: 14px;
+    }
+
+    @include vp-767 {
+      padding-top: 6px;
+    }
+
+    &--center > p {
+      margin: 0;
+      margin-top: 12px;
+      line-height: 150%;
+
+      @include vp-1023 {
+        margin-top: 0;
       }
     }
   }
-}
-
-.advantages__text {
-  padding-top: 20px;
-  margin: 0;
-
-  & > dt {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 150%;
-
-    @include vp-1023 {
-      font-size: 20px;
-    }
-  }
-
-  & > dd {
-    margin-top: 6px;
-    margin-left: 0;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 140%;
-
-    @include vp-1023 {
-      margin-top: 2px;
-    }
-  }
 
   @include vp-1023 {
-    padding-top: 14px;
+    grid-column: unset;
+    padding-bottom: 26px;
   }
 
   @include vp-767 {
-    padding-top: 6px;
-  }
-
-  &--center > p {
-    margin: 0;
-    margin-top: 12px;
-    line-height: 150%;
-
-    @include vp-1023 {
-      margin-top: 0;
-    }
+    flex-direction: column;
+    margin-top: 18px;
+    padding: 0 45px;
   }
 }
 
-.advantages__item--center {
+.advantages__item.advantages__item--center {
+  grid-column: 2/3;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   margin-top: 30px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 23.08%;
-  height: 73.5%;
+  margin-bottom: 80px;
+  grid-row: 1/99;
   background-color: #1c3374;
   color: $color-default-white;
-  text-align: center;
-  display: block;
-  padding: 4px;
-  padding-top: 34px;
-  padding-bottom: 34px;
+
+  @include vp-1023 {
+    grid-column: 1/-1;
+    grid-row: unset;
+    margin: 0 118px 0;
+    padding: 0 80px 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 10px;
+  }
+
+  & > li {
+    text-align: center;
+    display: block;
+    padding: 4px;
+    padding-top: 34px;
+    padding-bottom: 14px;
+
+    @include vp-1023 {
+      padding-top: 14px;
+      padding-bottom: 32px;
+    }
+
+    @include vp-767 {
+      padding: 20px 45px 37px;
+    }
+  }
 
   .advantages__quality {
     margin: 0;
@@ -228,27 +271,20 @@
       }
 
       @include vp-767 {
-        margin-top: -22px;
+        margin-top: -24px;
       }
     }
   }
 
-  @include vp-1023 {
-    position: static;
-    grid-column: 1/-1;
-    left: unset;
-    transform: unset;
-    width: 65.2%;
-    height: unset;
-    margin: 0 auto;
-    padding: 14px 80px 37px;
-  }
+  .advantages__text {
+    margin-top: 30px;
 
-  @include vp-767 {
-    width: 100%;
-    padding: 18px;
-    margin-top: 17px;
-    padding-bottom: 45px;
-    margin-bottom: 6px;
+    @include vp-1023 {
+      margin-top: 12px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+    }
   }
 }

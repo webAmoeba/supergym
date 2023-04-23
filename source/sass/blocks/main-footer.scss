@@ -113,6 +113,7 @@
   grid-column: 10/13;
   justify-content: end;
   gap: 7px;
+  align-items: start;
 
   @include vp-1023 {
     grid-column: unset;
