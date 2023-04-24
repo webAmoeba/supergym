@@ -146,19 +146,19 @@
             </div>
             <div class="subscriptions__content" data-tabs="content">
               <ul class="subscriptions__element" data-tabs="element">
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
                   <span data-content="5000">5000</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-content="1700">1700</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
                   <span data-content="2700">2700</span>
@@ -167,19 +167,19 @@
               </ul>
 
               <ul class="subscriptions__element" data-tabs="element">
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
                   <span data-content="25000">25000</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-content="8000">8000</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
                   <span data-content="13000">13000</span>
@@ -188,19 +188,19 @@
               </ul>
 
               <ul class="subscriptions__element" data-tabs="element">
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
                   <span data-content="50000">50000</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-content="17000">17000</span>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="subscriptions__element-item">
+                <li>
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
                   <span data-content="27000">27000</span>
@@ -224,17 +224,17 @@
                 </div>
                 <div class="super-games__date-time">
                   <div class="super-games__date">
-                    <span class="super-games__date-time-title">
-                      <span>Дата</span>
-                    </span>
+                    <div class="super-games__date-time-title">
+                      Дата
+                    </div>
                     <div class="super-games__date-grid">
                       <time datetime="2019-03-07">7</time>
                       <div class="super-games__month-year-grid">
                         <div class="super-games__month">
-                          <span>Марта</span>
+                          Марта
                         </div>
                         <div class="super-games__year">
-                          <span>2019</span>
+                          2019
                         </div>
                       </div>
                     </div>
@@ -242,7 +242,7 @@
 
                   <div class="super-games__time">
                     <div class="super-games__date-time-title">
-                      <span>Время</span>
+                      Время
                     </div>
                     <time datetime="12:00">12:00</time>
                   </div>
@@ -479,21 +479,11 @@
           <h2>Наши преимущества</h2>
 
           <div class="advantages__list">
-            <div class="advantages__item advantages__item--usual-without-js">
-              <dl class="advantages__quality">
-                <dt>900</dt>
-                <dd>кв/м</dd>
-              </dl>
-              <dl class="advantages__text">
-                <dt>Площадь</dt>
-                <dd>Занимайтесь без очередей и&nbsp;толпучки</dd>
-              </dl>
-            </div>
-
             <!--
               добавление "центрального преимущества" происходит внутри списка advantages__item--center,
-              сам список "центральных преимуществ" внутри общего списка advantages__list может быть в любом месте
-             -->
+              сам список "центральных преимуществ" внутри общего списка advantages__list может быть в любом месте,
+              так как advantages__list сортируется в файле sort-advantages.js
+           -->
             <ul class="advantages__item advantages__item--center">
               <li>
                 <dl class="advantages__quality">
@@ -507,7 +497,18 @@
               </li>
             </ul>
 
-            <div class="advantages__item advantages__item--usual-without-js">
+            <div class="advantages__item advantages__item--usual">
+              <dl class="advantages__quality">
+                <dt>900</dt>
+                <dd>кв/м</dd>
+              </dl>
+              <dl class="advantages__text">
+                <dt>Площадь</dt>
+                <dd>Занимайтесь без очередей и&nbsp;толпучки</dd>
+              </dl>
+            </div>
+
+            <div class="advantages__item advantages__item--usual">
               <dl class="advantages__quality">
                 <dt>70</dt>
                 <dd>машин</dd>
@@ -519,7 +520,7 @@
               </dl>
             </div>
 
-            <div class="advantages__item advantages__item--usual-without-js">
+            <div class="advantages__item advantages__item--usual">
               <dl class="advantages__quality">
                 <dt>350</dt>
                 <dd>мест</dd>
@@ -531,7 +532,7 @@
               </dl>
             </div>
 
-            <div class="advantages__item advantages__item--usual-without-js">
+            <div class="advantages__item advantages__item--usual">
               <dl class="advantages__quality">
                 <dt>5+</dt>
                 <dd>лет</dd>
@@ -552,9 +553,11 @@
           <div class="stocks__grid">
             <div class="stocks__first-block">
               <div class="stocks__payment">
-                <div class="stocks__period">Год</div>
+                <div class="stocks__period">
+                  Год
+                </div>
                 <div class="stocks__price">
-                  <span>4999</span>
+                  4999
                 </div>
                 <p>
                   Безлимитный абонемент в&nbsp;тренажерный зал
@@ -616,7 +619,7 @@
                 </picture>
                 <div class="reviews__text">
                   <div class="reviews__person">
-                    <span>Анна Орлова</span>
+                    Анна Орлова
                   </div>
                   <div class="reviews__review">
                     <p>
@@ -636,7 +639,7 @@
                 </picture>
                 <div class="reviews__text">
                   <div class="reviews__person">
-                    <span>Пётр</span>
+                    Пётр
                   </div>
                   <div class="reviews__review">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -653,7 +656,7 @@
                 </picture>
                 <div class="reviews__text">
                   <div class="reviews__person">
-                    <span>Саманта Смит</span>
+                    Саманта Смит
                   </div>
                   <div class="reviews__review">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>

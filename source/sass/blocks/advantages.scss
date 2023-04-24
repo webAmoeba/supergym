@@ -35,8 +35,6 @@
   display: grid;
   grid-template-columns: 1fr 23% 1fr;
   column-gap: 5.6%;
-  grid-auto-flow: dense;
-
 
   @include vp-1023 {
     column-gap: 30px;
@@ -51,7 +49,7 @@
   }
 }
 
-.advantages__item--usual-without-js {
+.advantages__item--usual {
   padding-top: 2px;
   display: flex;
   column-gap: 30px;
@@ -214,9 +212,12 @@
   list-style-type: none;
   margin-top: 30px;
   margin-bottom: 80px;
-  grid-row: 1/99;
+  grid-row: 1/999;
   background-color: #1c3374;
   color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include vp-1023 {
     grid-column: 1/-1;
@@ -235,9 +236,9 @@
   & > li {
     text-align: center;
     display: block;
-    padding: 4px;
-    padding-top: 34px;
-    padding-bottom: 14px;
+    padding: 0 4px;
+    padding-top: 24px;
+    padding-bottom: 42px;
 
     @include vp-1023 {
       padding-top: 14px;

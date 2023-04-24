@@ -145,7 +145,7 @@
   }
 }
 
-.subscriptions__element-item {
+.subscriptions__element > li {
   display: grid;
   justify-content: center;
   padding: 58px 10px 60px;
