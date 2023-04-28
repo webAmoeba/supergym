@@ -44,14 +44,14 @@
 
   @include vp-1199 {
     margin-top: 40px;
-    display: flex;
-    flex-direction: column;
     gap: 30px;
+    align-items: unset;
   }
 
   @include vp-767 {
     margin-top: 41px;
     text-align: center;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -64,6 +64,8 @@
 
   @include vp-1199 {
     display: flex;
+    grid-row: unset;
+    grid-column: 1/-1;
   }
 
   @include vp-767 {
@@ -162,7 +164,6 @@
   @include vp-1199 {
     min-height: 211px;
     padding: 24px 28px 30px;
-    width: 50%;
   }
 
   @include vp-767 {
