@@ -4,7 +4,7 @@
   text-align: left;
   position: relative;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 21px;
     padding-bottom: 100px;
   }
@@ -51,7 +51,7 @@
     margin-right: auto;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     text-align: center;
     margin-bottom: 31px;
   }
@@ -107,8 +107,8 @@
   padding: 9%;
 }
 
-.instructors__slide-text:hover,
-.instructors__slide-text:focus-visible {
+// local mixin
+@mixin show-text {
   align-content: start;
   z-index: 1;
   background-color: rgba(16, 38, 84, 0.89);
@@ -175,6 +175,15 @@
   }
 }
 
+.instructors__slide-text:hover,
+.instructors__slide-text:focus-visible {
+  @include show-text;
+}
+
+.instructors__list > li:focus .instructors__slide-text {
+  @include show-text;
+}
+
 .instructors__img img {
   min-height: 100%;
   width: 100%;
@@ -221,7 +230,7 @@
     width: calc((100vw - 864px) / 2);
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: calc((100vw - 566px) / 2);
   }
 
@@ -256,7 +265,7 @@
       right: 40%;
     }
 
-    @include vp-1023 {
+    @include vp-1199 {
       right: 10%;
     }
 
@@ -302,7 +311,7 @@
       left: 40%;
     }
 
-    @include vp-1023 {
+    @include vp-1199 {
       left: 10%;
     }
 

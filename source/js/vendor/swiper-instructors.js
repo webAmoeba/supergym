@@ -11,8 +11,8 @@ const initSwiperInstructors = (swiper) => {
 
       // Navigation arrows
       navigation: {
-        nextEl: '.instructors__button-left',
-        prevEl: '.instructors__button-right',
+        prevEl: '.instructors__button-left',
+        nextEl: '.instructors__button-right',
       },
 
       slidesPerView: 4,

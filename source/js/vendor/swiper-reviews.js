@@ -11,8 +11,8 @@ const initSwiperReviews = (swiper) => {
 
       // Navigation arrows
       navigation: {
-        nextEl: '.reviews__button-left',
-        prevEl: '.reviews__button-right',
+        prevEl: '.reviews__button-left',
+        nextEl: '.reviews__button-right',
       },
 
       initialSlide: 0,

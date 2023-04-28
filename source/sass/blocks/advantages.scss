@@ -3,7 +3,7 @@
   padding-top: 58px;
   padding-bottom: 59px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 72px;
     padding-bottom: 50px;
   }
@@ -21,7 +21,7 @@
   margin: 0 auto;
   padding: 0 80px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 0 45px;
   }
 
@@ -36,7 +36,7 @@
   grid-template-columns: 1fr 23% 1fr;
   column-gap: 5.6%;
 
-  @include vp-1023 {
+  @include vp-1199 {
     column-gap: 30px;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
@@ -61,7 +61,7 @@
     grid-column: 1/2;
     padding-left: 20px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       grid-column: unset;
       padding-left: 0;
     }
@@ -75,7 +75,7 @@
     grid-column: 3/4;
     padding-left: 0;
 
-    @include vp-1023 {
+    @include vp-1199 {
       grid-column: unset;
     }
 
@@ -87,7 +87,7 @@
   &:nth-of-type(n + 3) {
     padding-top: 56px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding-top: 28px;
     }
 
@@ -104,7 +104,7 @@
       width: 100%;
       background-color: rgba(209, 10, 66, 0.2);
 
-      @include vp-1023 {
+      @include vp-1199 {
         display: none;
       }
     }
@@ -123,7 +123,7 @@
       background-clip: text;
 
 
-      @include vp-1023 {
+      @include vp-1199 {
         font-size: 58px;
         background-image: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
       }
@@ -136,7 +136,7 @@
       color: #2e35ac;
       margin-left: 0;
 
-      @include vp-1023 {
+      @include vp-1199 {
         transform: translateY(-18px);
       }
 
@@ -156,7 +156,7 @@
       font-size: 22px;
       line-height: 150%;
 
-      @include vp-1023 {
+      @include vp-1199 {
         font-size: 20px;
       }
     }
@@ -169,12 +169,12 @@
       font-size: 16px;
       line-height: 140%;
 
-      @include vp-1023 {
+      @include vp-1199 {
         margin-top: 2px;
       }
     }
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding-top: 14px;
     }
 
@@ -187,13 +187,13 @@
       margin-top: 12px;
       line-height: 150%;
 
-      @include vp-1023 {
+      @include vp-1199 {
         margin-top: 0;
       }
     }
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-column: unset;
     padding-bottom: 26px;
   }
@@ -219,7 +219,7 @@
   flex-direction: column;
   justify-content: center;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-column: 1/-1;
     grid-row: unset;
     margin: 0 118px 0;
@@ -240,7 +240,7 @@
     padding-top: 24px;
     padding-bottom: 42px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding-top: 14px;
       padding-bottom: 32px;
     }
@@ -266,7 +266,7 @@
       line-height: 150%;
       margin-top: -16px;
 
-      @include vp-1023 {
+      @include vp-1199 {
         font-size: 22px;
         margin-top: -18px;
       }
@@ -280,7 +280,7 @@
   .advantages__text {
     margin-top: 30px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       margin-top: 12px;
     }
 

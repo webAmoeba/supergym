@@ -6,6 +6,7 @@ import {initSwiperInstructors} from './vendor/swiper-instructors.js';
 import {initSwiperReviews} from './vendor/swiper-reviews.js';
 import './utils/create-video';
 import './utils/sort-advantages';
+import './utils/set-instructor-index';
 
 // ---------------------------------
 

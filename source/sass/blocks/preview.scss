@@ -1,7 +1,7 @@
 .preview {
   padding: 120px 0 235px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 80px;
     padding-bottom: 100px;
   }
@@ -22,7 +22,7 @@
   justify-content: space-between;
   gap: 24px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     flex-direction: column;
     gap: 37px;
   }
@@ -38,7 +38,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     text-align: center;
     max-width: 510px;
 
@@ -59,7 +59,7 @@
     line-height: 58px;
     text-align: left;
 
-    @include vp-1023 {
+    @include vp-1199 {
       font-size: 42px;
       line-height: 50px;
       text-align: center;
@@ -74,7 +74,7 @@
 }
 
 .preview__img {
-  @include vp-1023 {
+  @include vp-1199 {
     img {
       width: 100%;
     }
@@ -90,13 +90,14 @@
   height: 228px;
   position: absolute;
   left: 437px;
-  bottom: -115px;
+  top: 288px;
+
   background-color: $color-default-black;
 
   img {
     object-fit: cover;
 
-    @include vp-1023 {
+    @include vp-1199 {
       width: 100%;
     }
 
@@ -107,11 +108,12 @@
     }
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-top: -121px;
     position: relative;
     left: unset;
     bottom: unset;
+    top: unset;
     transform: unset;
     width: calc(266 / 768 * 100vw);
     height: calc(167 / 768 * 100vw);
@@ -158,7 +160,7 @@
 
     @include behavior(8px, $color-default-red);
 
-    @include vp-1023 {
+    @include vp-1199 {
       width: 74px;
       height: 74px;
     }
