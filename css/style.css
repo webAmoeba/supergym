@@ -4267,20 +4267,18 @@ button,
 @media (max-width: 1199px) {
   .stocks__grid {
     margin-top: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     gap: 30px;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
 }
 @media (max-width: 767px) {
   .stocks__grid {
     margin-top: 41px;
     text-align: center;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -4300,6 +4298,8 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    grid-row: unset;
+    grid-column: 1/-1;
   }
 }
 @media (max-width: 767px) {
@@ -4435,7 +4435,6 @@ button,
   .stocks__advantage {
     min-height: 211px;
     padding: 24px 28px 30px;
-    width: 50%;
   }
 }
 @media (max-width: 767px) {
