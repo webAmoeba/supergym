@@ -20,17 +20,15 @@
 
 .main-header__first-line {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  align-items: end;
-
-  @include vp-1199 {
-    align-items: center;
-  }
+  align-items: start;
 }
 
 .main-header__main-logo-link {
+  flex-shrink: 0;
+  margin-top: 7px;
+
   @include behavior;
 
   img {
@@ -48,7 +46,15 @@
   }
 }
 
-.main-header__phone {
+.main-header__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+.main-header__menu-item {
   color: inherit;
   font-family: $ff-alumni-sans;
   font-style: normal;
