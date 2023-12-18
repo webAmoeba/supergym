@@ -1,3 +1,4 @@
+[gh page](https://webamoeba.github.io/supergym/)
 ## Краткая инструкция по работе
 Для начала работы у вас должент быть установлен **Node.js**
 
